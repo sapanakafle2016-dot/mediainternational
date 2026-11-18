@@ -1,26 +1,95 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-brand-blue: #205A98;
+  --color-brand-blue-dark: #164070;
+  --color-brand-blue-light: #2c75c4;
+  --color-brand-red: #D0372F;
+  --color-brand-red-dark: #ab2720;
+  --color-brand-red-light: #e64d45;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --brand-blue: #205A98;
+    --brand-blue-hover: #164070;
+    --brand-red: #D0372F;
+    --brand-red-hover: #ab2720;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Noto Sans Devanagari", "Mukti", "Preeti", sans-serif;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Explicit Brand Utilities for 100% Reliable Rendering */
+.bg-brand-blue { background-color: #205A98 !important; }
+.bg-brand-blue-dark { background-color: #164070 !important; }
+.bg-brand-blue-light { background-color: #2c75c4 !important; }
+.text-brand-blue { color: #205A98 !important; }
+.text-brand-blue-dark { color: #164070 !important; }
+.text-brand-blue-light { color: #2c75c4 !important; }
+.border-brand-blue { border-color: #205A98 !important; }
+
+.bg-brand-red { background-color: #D0372F !important; }
+.bg-brand-red-dark { background-color: #ab2720 !important; }
+.bg-brand-red-light { background-color: #e64d45 !important; }
+.text-brand-red { color: #D0372F !important; }
+.text-brand-red-dark { color: #ab2720 !important; }
+.text-brand-red-light { color: #e64d45 !important; }
+.border-brand-red { border-color: #D0372F !important; }
+
+/* Brand Opacity Utilities */
+.bg-brand-blue\/5 { background-color: rgba(32, 90, 152, 0.05) !important; }
+.bg-brand-blue\/10 { background-color: rgba(32, 90, 152, 0.1) !important; }
+.bg-brand-blue\/20 { background-color: rgba(32, 90, 152, 0.2) !important; }
+.border-brand-blue\/20 { border-color: rgba(32, 90, 152, 0.2) !important; }
+.border-brand-blue\/30 { border-color: rgba(32, 90, 152, 0.3) !important; }
+.border-brand-blue\/40 { border-color: rgba(32, 90, 152, 0.4) !important; }
+
+.bg-brand-red\/10 { background-color: rgba(208, 55, 47, 0.1) !important; }
+.bg-brand-red\/20 { background-color: rgba(208, 55, 47, 0.2) !important; }
+.border-brand-red\/20 { border-color: rgba(208, 55, 47, 0.2) !important; }
+.border-brand-red\/30 { border-color: rgba(208, 55, 47, 0.3) !important; }
+.border-brand-red\/40 { border-color: rgba(208, 55, 47, 0.4) !important; }
+
+/* Brand Hover & Focus Utilities */
+.hover\:bg-brand-blue-dark:hover { background-color: #164070 !important; }
+.hover\:bg-brand-red:hover { background-color: #D0372F !important; }
+.hover\:bg-brand-red-dark:hover { background-color: #ab2720 !important; }
+.hover\:text-brand-blue:hover { color: #205A98 !important; }
+.hover\:text-brand-red:hover { color: #D0372F !important; }
+.hover\:border-brand-blue:hover { border-color: #205A98 !important; }
+.hover\:border-brand-red:hover { border-color: #D0372F !important; }
+
+/* Custom smooth transitions & animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Custom Brand Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #205A98;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D0372F;
 }

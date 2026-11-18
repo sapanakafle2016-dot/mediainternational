@@ -1,0 +1,924 @@
+export type Language = "ne" | "en";
+
+export interface StatItem {
+  number: string;
+  labelEn: string;
+  labelNe: string;
+  descEn: string;
+  descNe: string;
+}
+
+export interface ProgramItem {
+  id: string;
+  category: "finance" | "banking" | "insurance" | "capital" | "digital";
+  titleNe: string;
+  titleEn: string;
+  subtitleNe: string;
+  subtitleEn: string;
+  descriptionNe: string;
+  descriptionEn: string;
+  pointsNe: string[];
+  pointsEn: string[];
+  icon: string;
+  badgeNe: string;
+  badgeEn: string;
+}
+
+export interface MilestoneItem {
+  year: string;
+  phaseNe: string;
+  phaseEn: string;
+  titleNe: string;
+  titleEn: string;
+  descriptionNe: string;
+  descriptionEn: string;
+  impactNe: string;
+  impactEn: string;
+}
+
+export interface OpportunityItem {
+  id: string;
+  titleNe: string;
+  titleEn: string;
+  sectorNe: string;
+  sectorEn: string;
+  descriptionNe: string;
+  descriptionEn: string;
+  potentialNe: string;
+  potentialEn: string;
+  examplesNe: string[];
+  examplesEn: string[];
+  icon: string;
+  tagNe: string;
+  tagEn: string;
+}
+
+export interface AchievementItem {
+  titleNe: string;
+  titleEn: string;
+  metric: string;
+  categoryNe: string;
+  categoryEn: string;
+  descriptionNe: string;
+  descriptionEn: string;
+  highlightsNe: string[];
+  highlightsEn: string[];
+}
+
+export interface FuturePlanItem {
+  id: string;
+  titleNe: string;
+  titleEn: string;
+  timeframeNe: string;
+  timeframeEn: string;
+  descriptionNe: string;
+  descriptionEn: string;
+  objectivesNe: string[];
+  objectivesEn: string[];
+  icon: string;
+}
+
+export interface FaqItem {
+  qNe: string;
+  qEn: string;
+  aNe: string;
+  aEn: string;
+}
+
+export const statsData: StatItem[] = [
+  {
+    number: "१५+",
+    labelNe: "वर्षको अनवरत यात्रा",
+    labelEn: "15+ Years of Journey",
+    descNe: "वित्तीय साक्षरता र आर्थिक जागरणमा समर्पित",
+    descEn: "Dedicated to financial literacy & economic awareness",
+  },
+  {
+    number: "७",
+    labelNe: "वटै प्रदेशमा उपस्थिति",
+    labelEn: "All 7 Provinces Reached",
+    descNe: "पूर्व मेचीदेखि पश्चिम महाकालीसम्म अभियान",
+    descEn: "Campaigns across all 7 provinces of Nepal",
+  },
+  {
+    number: "३५०+",
+    labelNe: "राष्ट्रव्यापी कार्यक्रम तथा मेला",
+    labelEn: "350+ Nationwide Events & Expos",
+    descNe: "विभिन्न जिल्ला र स्थानीय तहमा प्रत्यक्ष सञ्चालन",
+    descEn: "Organized across districts and local municipalities",
+  },
+  {
+    number: "५ लाख+",
+    labelNe: "प्रत्यक्ष तथा अप्रत्यक्ष प्रभाव",
+    labelEn: "500,000+ Citizens Reached",
+    descNe: "नागरिक, युवा र उद्यमीहरूमाझ चेतना विस्तार",
+    descEn: "Citizens, youth, and entrepreneurs empowered",
+  },
+];
+
+export const milestonesData: MilestoneItem[] = [
+  {
+    year: "२०१० - २०१३",
+    phaseNe: "स्थापना तथा जागरण चरण",
+    phaseEn: "Foundation & Awareness Phase",
+    titleNe: "आर्थिक सञ्चार र वित्तीय साक्षरताको जग",
+    titleEn: "Foundation of Economic Media & Financial Literacy",
+    descriptionNe:
+      "मिडिया इन्टरनेशनलको स्थापना भई नेपालको पहिलो चरणको विशेष आर्थिक तथा वित्तीय सञ्चार पहल प्रारम्भ। आम नागरिकमा बचत, बैंकिङ र लगानीका आधारभूत चेतना जगाउने कामको थालनी भयो।",
+    descriptionEn:
+      "Media International was established to introduce pioneer economic and financial communication, instilling foundational habits of savings, banking, and smart money management.",
+    impactNe: "काठमाडौँ उपत्यका तथा प्रमुख शहरहरूमा प्रारम्भिक कार्यशाला र जनचेतनामूलक सामग्री प्रकाशन।",
+    impactEn: "Conducted baseline workshops and published foundational literacy materials in major cities.",
+  },
+  {
+    year: "२०१४ - २०१७",
+    phaseNe: "विस्तार तथा मेला–महोत्सव",
+    phaseEn: "Expos & Nationwide Expansion",
+    titleNe: "वित्तीय साक्षरता महाअभियान र प्रदर्शनी",
+    titleEn: "National Financial Literacy Expos & Conclaves",
+    descriptionNe:
+      "नेपाल राष्ट्र बैंक, बीमा प्राधिकरण, धितोपत्र बोर्ड तथा वित्तीय संस्थाहरूसँगको सहकार्यमा बृहत् राष्ट्रिय वित्तीय साक्षरता मेला तथा अन्तरक्रिया कार्यक्रमहरूको शृङ्खला सञ्चालन।",
+    descriptionEn:
+      "Collaborated with regulators (NRB, Insurance Authority, SEBON) and BFIs to host comprehensive National Financial Literacy Expos and multi-stakeholder summits.",
+    impactNe: "हजारौँ विद्यार्थी, व्यवसायी र सर्वसाधारणलाई एउटै छानामुनि बैंकिङ, बीमा र शेयर बजारको ज्ञान।",
+    impactEn: "United thousands of students, MSME owners, and families with practical financial knowledge.",
+  },
+  {
+    year: "२०१८ - २०२१",
+    phaseNe: "उद्यमशीलता र स्वदेश जागरण",
+    phaseEn: "Entrepreneurship & Domestic Enterprise",
+    titleNe: "‘काम गरौँ आफ्नै देशमा’ राष्ट्रिय अभियानको थालनी",
+    titleEn: "Launch of 'Kam Garau Aaphnai Deshma' National Campaign",
+    descriptionNe:
+      "वैदेशिक रोजगारीबाट फर्किएका तथा स्वदेशमै केही गर्न चाहने युवाहरूलाई लक्षित गरी व्यावसायिक साक्षरता, उद्यमशीलता प्रवर्द्धन र स्थानीय स्रोत–साधनको उपयोगबारे देशव्यापी अभियान।",
+    descriptionEn:
+      "Initiated the nationwide movement empowering youth and returnee migrants to build sustainable enterprises utilizing local resources within Nepal.",
+    impactNe: "स्थानीय तहहरूसँग साझेदारी गरी स्वरोजगार, सहुलियतपूर्ण कर्जा र व्यवसाय विकासमा सहजीकरण।",
+    impactEn: "Partnered with municipalities to facilitate concessional loans and entrepreneurship bootcamps.",
+  },
+  {
+    year: "२०२२ - हालसम्म",
+    phaseNe: "सम्भावना र डिजिटल युग",
+    phaseEn: "Possibilities & Digital Era",
+    titleNe: "‘सम्भावना’ र डिजिटल वित्तीय सशक्तीकरण",
+    titleEn: "'Sambhawana' & Digital Financial Inclusion",
+    descriptionNe:
+      "नेपालभित्रका अथाह सम्भावनाहरूको उजागर गर्दै डिजिटल बैंकिङ, क्युआर भुक्तानी, फिनटेक, कृषि–उद्यम र आगामी पुस्ताका सीपहरूमा जोड दिइएको अत्याधुनिक अभियान।",
+    descriptionEn:
+      "Championing untapped opportunities across Nepal while equipping citizens with digital finance, QR ecosystems, cyber hygiene, and green enterprise skills.",
+    impactNe: "७ वटै प्रदेशमा डिजिटल वित्तीय साक्षरता, सम्भावना संवाद र युवा सम्मेलनहरूको निरन्तरता।",
+    impactEn: "Continuous digital literacy labs, Sambhawana dialogue series, and youth economic conclaves.",
+  },
+];
+
+export const programsData: ProgramItem[] = [
+  {
+    id: "financial-literacy",
+    category: "finance",
+    titleNe: "वित्तीय साक्षरता (Financial Literacy)",
+    titleEn: "Financial Literacy Program",
+    subtitleNe: "पारिवारिक बजेट, बचत र सम्पत्ति व्यवस्थापनको जग",
+    subtitleEn: "Foundations of Budgeting, Savings & Asset Management",
+    descriptionNe:
+      "आम्दानी, खर्च, बचत, ऋण व्यवस्थापन र लगानीको सही प्रयोग सम्बन्धी व्यावहारिक ज्ञान प्रदान गरी नागरिकलाई आर्थिक रूपमा सक्षम बनाउने कार्यक्रम।",
+    descriptionEn:
+      "Empowers individuals and families with actionable knowledge on budgeting, emergency funds, debt optimization, and long-term financial security.",
+    pointsNe: [
+      "पारिवारिक आय-व्यय व्यवस्थापन र मासिक बचतको नियम",
+      "सहुलियतपूर्ण ऋण र अनुशासित वित्तीय व्यवहार",
+      "वित्तीय ठगी तथा जोखिमहरूबाट जोगिने उपाय",
+      "चक्रवृद्धि ब्याज र दीर्घकालीन सम्पत्ति निर्माण",
+    ],
+    pointsEn: [
+      "Family cash-flow budgeting and automated monthly savings",
+      "Prudent debt management and subsidized loan awareness",
+      "Protection against fraud, scams, and unregulated lending",
+      "Compounding growth and resilient wealth planning",
+    ],
+    icon: "Wallet",
+    badgeNe: "आधारभूत स्तम्भ",
+    badgeEn: "Core Pillar",
+  },
+  {
+    id: "banking-services",
+    category: "banking",
+    titleNe: "बैंकिङ तथा वित्तीय पहुँच (Banking & Financial Access)",
+    titleEn: "Banking & Financial Services",
+    subtitleNe: "औपचारिक बैंकिङ च्यानल र सहुलियत कर्जा",
+    subtitleEn: "Formal Banking Channels & Concessional Lending",
+    descriptionNe:
+      "गाउँ-गाउँसम्म बैंकिङ सेवाको पहुँच पुर्‍याउन, खाता सञ्चालन, कर्जा प्रक्रिया, र विपन्न वर्ग लक्षित वित्तीय कार्यक्रमहरूबारे सुसूचित गराउने।",
+    descriptionEn:
+      "Bridges the gap between formal financial institutions and grassroots communities, demystifying account operations, credit access, and MSME financing.",
+    pointsNe: [
+      "बैंक खाताको सही उपयोग र चेक/इ–बैंकिङ प्रक्रिया",
+      "कृषि, महिला तथा युवा उद्यमशीलता कर्जा प्राप्ति विधि",
+      "सहकारी तथा लघुवित्त संस्थाहरूको सन्तुलित प्रयोग",
+      "क्रेडिट स्कोर (कर्जा सूचना) को महत्त्व र अनुशासन",
+    ],
+    pointsEn: [
+      "Effective bank account management and electronic services",
+      "Accessing agricultural, women, and youth concessional loans",
+      "Prudent engagement with cooperatives and microfinance institutions",
+      "Credit history hygiene and financial discipline",
+    ],
+    icon: "Building2",
+    badgeNe: "वित्तीय पहुँच",
+    badgeEn: "Financial Access",
+  },
+  {
+    id: "insurance-awareness",
+    category: "insurance",
+    titleNe: "बीमा साक्षरता (Insurance Literacy)",
+    titleEn: "Insurance Awareness & Risk Management",
+    subtitleNe: "जीवन, स्वास्थ्य तथा व्यवसायको सुरक्षा कवच",
+    subtitleEn: "Safety Net for Life, Health & Enterprises",
+    descriptionNe:
+      "अनपेक्षित दुर्घटना, प्राकृतिक विपत्ति, स्वास्थ्य संकट र कृषि जोखिमबाट परिवार र व्यवसायलाई जोगाउन बीमाको अनिवार्यता बुझाउने कार्यक्रम।",
+    descriptionEn:
+      "Educates citizens on risk mitigation through life, health, micro-insurance, livestock, and crop insurance to safeguard against unpredictable shocks.",
+    pointsNe: [
+      "जीवन बीमा र निर्जीवन बीमाका प्रकार तथा फाइदाहरू",
+      "बाली तथा पशुधन बीमा: किसानहरूको सुरक्षा र अनुदान",
+      "स्वास्थ्य बीमा र जटिल रोग सुरक्षा योजनाहरू",
+      "दाबी भुक्तानी (Claim Settlement) प्रक्रिया र आवश्यक कागजात",
+    ],
+    pointsEn: [
+      "Understanding life vs. non-life insurance policies and benefits",
+      "Crop and livestock insurance with government premium subsidies",
+      "Health insurance and critical illness protective coverage",
+      "Transparent claim settlement procedures and required documentation",
+    ],
+    icon: "ShieldCheck",
+    badgeNe: "जोखिम व्यवस्थापन",
+    badgeEn: "Risk Protection",
+  },
+  {
+    id: "capital-markets",
+    category: "capital",
+    titleNe: "पुँजी बजार साक्षरता (Capital Market Literacy)",
+    titleEn: "Capital Market & Investment Literacy",
+    subtitleNe: "प्राथमिक सेयर (IPO), दोस्रो बजार र दीर्घकालीन लगानी",
+    subtitleEn: "IPOs, Secondary Trading & Long-Term Wealth Creation",
+    descriptionNe:
+      "सर्वसाधारण नागरिक, विशेष गरी युवा तथा वैदेशिक रोजगारीमा रहेका नेपालीहरूलाई शेयर बजार, म्युचुअल फण्ड र सुरक्षित लगानीका सिद्धान्त बुझाउने।",
+    descriptionEn:
+      "Introduces youth, professionals, and overseas Nepali workers to disciplined stock market investing, primary issues (IPOs), mutual funds, and SEBON regulations.",
+    pointsNe: [
+      "डिम्याट (Demat), सि-आस्बा (C-ASBA) र मेरो शेयरको सुरक्षित प्रयोग",
+      "कम्पनीको वित्तीय विवरण विश्लेषण (EPS, PE Ratio, Net Worth)",
+      "हल्ला र अफवाहको भरमा नभई तथ्यपरक लगानी गर्ने विधि",
+      "म्युचुअल फण्ड र पोर्टफोलियो विविधीकरण (Diversification)",
+    ],
+    pointsEn: [
+      "Safe usage of Demat, C-ASBA, and MeroShare online platforms",
+      "Fundamental company balance sheet analysis (EPS, P/E, Book Value)",
+      "Fact-based investing versus speculative herd behavior",
+      "Mutual funds and balanced portfolio risk diversification",
+    ],
+    icon: "TrendingUp",
+    badgeNe: "लगानी ज्ञान",
+    badgeEn: "Investment Savvy",
+  },
+  {
+    id: "digital-finance",
+    category: "digital",
+    titleNe: "डिजिटल वित्तीय साक्षरता (Digital Financial Literacy)",
+    titleEn: "Digital Finance & Cybersecurity",
+    subtitleNe: "क्युआर, वालेट, मोबाइल बैंकिङ र साइबर सुरक्षा",
+    subtitleEn: "QR Codes, Digital Wallets, Mobile Banking & Cyber Safety",
+    descriptionNe:
+      "नगदरहित अर्थतन्त्रतर्फको यात्रामा सुरक्षित डिजिटल कारोबार, ओटिपी (OTP) सुरक्षा र वित्तीय प्रविधिको सही सदुपयोग सिकाउने आधुनिक कार्यक्रम।",
+    descriptionEn:
+      "Guides citizens towards a secure cashless economy, teaching best practices for mobile wallets, instant transfers, and defense against digital frauds.",
+    pointsNe: [
+      "क्युआर कोड (QR Code) र मोबाइल वालेटबाट सुरक्षित भुक्तानी",
+      "ओटिपी (OTP), पासवर्ड र व्यक्तिगत विवरणको गोपनीयता",
+      "सामाजिक सञ्जाल र अनलाइन फिसिङ/ठगीबाट जोगिने चेतना",
+      "डिजिटल कर भुक्तानी र सरकारी सेवाहरूको विद्युतीय पहुँच",
+    ],
+    pointsEn: [
+      "Seamless and safe merchant payments via interoperable QR codes",
+      "Guarding OTPs, PINs, and personal financial credentials",
+      "Detecting phishing, lottery scams, and social media impersonations",
+      "Online tax filing and digital access to public civic utilities",
+    ],
+    icon: "Smartphone",
+    badgeNe: "आधुनिक प्रविधि",
+    badgeEn: "Fintech Era",
+  },
+];
+
+export const opportunitiesData: OpportunityItem[] = [
+  {
+    id: "agro-processing",
+    titleNe: "व्यावसायिक कृषि तथा कृषि–प्रशोधन",
+    titleEn: "Commercial Agriculture & Agro-Processing",
+    sectorNe: "कृषि तथा उत्पादन",
+    sectorEn: "Agriculture & Value Addition",
+    descriptionNe:
+      "नेपालको हावापानी सुहाउँदो उच्च मूल्यका नगदे बाली, जडीबुटी, च्याउ, किबी, अर्गानिक कफी, चिया र डेरी प्रशोधनमा लाखौँ रोजगारीको सम्भावना छ।",
+    descriptionEn:
+      "Vast potential in climate-adapted high-value cash crops, medicinal herbs, organic specialty tea, coffee, kiwi, honey, and modern dairy processing.",
+    potentialNe: "आयात प्रतिस्थापन, स्थानीय रोजगारी र विदेशी बजारमा प्रिमियम मूल्यको अवसर।",
+    potentialEn: "High import substitution, rural employment, and global premium export potential.",
+    examplesNe: [
+      "अर्गानिक चिया तथा कफी प्रशोधन उद्योग",
+      "शीतभण्डार (Cold Storage) तथा आधुनिक प्याकेजिङ",
+      "जडीबुटी प्रशोधन तथा सुगन्धित तेल उत्पादन",
+    ],
+    examplesEn: [
+      "Specialty organic tea & highland coffee processing",
+      "Solar cold storage & modern farmgate packaging",
+      "High-altitude herbal essential oils & Ayurveda extracts",
+    ],
+    icon: "Sprout",
+    tagNe: "उच्च सम्भावना",
+    tagEn: "High Impact",
+  },
+  {
+    id: "tourism-hospitality",
+    titleNe: "पर्यापर्यटन, होमस्टे तथा साहसिक पर्यटन",
+    titleEn: "Ecotourism, Homestays & Adventure Travel",
+    sectorNe: "पर्यटन तथा सेवा",
+    sectorEn: "Tourism & Hospitality",
+    descriptionNe:
+      "नेपालको अद्वितीय प्राकृतिक सौन्दर्य र सांस्कृतिक विविधतालाई सदुपयोग गर्दै सामुदायिक होमस्टे, वेलनेस रिसोर्ट र नयाँ ट्रेकिङ रुटहरू विकास गर्न सकिन्छ।",
+    descriptionEn:
+      "Leveraging pristine geographic diversity and indigenous hospitality through community homestays, wellness retreats, and experiential travel.",
+    potentialNe: "स्थानीय उत्पादनको प्रत्यक्ष खपत र ग्रामीण अर्थतन्त्रको कायापलट।",
+    potentialEn: "Direct consumption of local produce and rejuvenation of rural economies.",
+    examplesNe: [
+      "अग्र्यानिक खानपानसहितको सामुदायिक होमस्टे",
+      "साहसिक खेल (र्‍याफ्टिङ, प्याराग्लाइडिङ, जिपलाइन)",
+      "सांस्कृतिक तथा आध्यात्मिक पर्यटन सर्किट",
+    ],
+    examplesEn: [
+      "Community homestays featuring farm-to-table culinary experiences",
+      "Adventure sports tourism (rafting, paragliding, rock climbing)",
+      "Spiritual wellness, yoga retreats, and heritage trails",
+    ],
+    icon: "Compass",
+    tagNe: "दिगो आम्दानी",
+    tagEn: "Sustainable Revenue",
+  },
+  {
+    id: "clean-energy",
+    titleNe: "हरित ऊर्जा तथा विद्युतीय गतिशीलता",
+    titleEn: "Clean Energy, Hydropower & E-Mobility",
+    sectorNe: "ऊर्जा तथा वातावरण",
+    sectorEn: "Energy & Infrastructure",
+    descriptionNe:
+      "जलविद्युत, सौर्य ऊर्जा र विद्युतीय सवारीसाधनको पूर्वाधार विस्तारले इन्धन आयात घटाउन र स्वच्छ हरित अर्थतन्त्र निर्माण गर्न मद्दत गर्दछ।",
+    descriptionEn:
+      "Harnessing hydro, rooftop solar, and EV infrastructure to slash petroleum imports and drive a low-carbon green industrial economy.",
+    potentialNe: "नेपालको ऊर्जा आत्मनिर्भरता र औद्योगिक लागतमा व्यापक कटौती।",
+    potentialEn: "National energy self-sufficiency and substantial lowering of industrial overheads.",
+    examplesNe: [
+      "लघु तथा मध्यम जलविद्युत आयोजनाहरूमा स्थानीय लगानी",
+      "ग्रामीण सौर्य ऊर्जा प्रणाली तथा सिँचाइ पम्पिङ",
+      "विद्युतीय सवारी चार्जिङ स्टेशन र मर्मत केन्द्र",
+    ],
+    examplesEn: [
+      "Community-equity micro and small hydropower ventures",
+      "Solar-powered agricultural irrigation and cold chains",
+      "EV charging network development and battery maintenance hubs",
+    ],
+    icon: "Zap",
+    tagNe: "भविष्यको आधार",
+    tagEn: "Future Backbone",
+  },
+  {
+    id: "it-digital",
+    titleNe: "सूचना प्रविधि, डिजिटल सेवा तथा रिमोट वर्क",
+    titleEn: "Information Technology & Remote Work",
+    sectorNe: "डिजिटल अर्थतन्त्र",
+    sectorEn: "Digital Economy",
+    descriptionNe:
+      "नेपाली युवाहरूले स्वदेशमै बसेर विश्वव्यापी बजारका लागि सफ्टवेयर, एआई, डिजिटल मार्केटिङ र सामग्री सिर्जना गरी विदेशी मुद्रा आर्जन गर्न सक्छन्।",
+    descriptionEn:
+      "Enables young professionals to build software, AI solutions, digital design, and remote services for global clients right from Nepal.",
+    potentialNe: "भौगोलिक सिमाना बिना विश्वस्तरीय आम्दानी र बौद्धिक रोजगारी।",
+    potentialEn: "Border-free global foreign-exchange earnings and high-value knowledge careers.",
+    examplesNe: [
+      "सफ्टवेयर विकास र मोबाइल एप सोलुसन",
+      "डिजिटल मार्केटिङ, कन्टेन्ट क्रिएसन र ग्राफिक डिजाइन",
+      "डाटा विश्लेषण र कृत्रिम बुद्धिमत्ता (AI) सेवाहरू",
+    ],
+    examplesEn: [
+      "Custom software engineering and mobile application development",
+      "Digital performance marketing and creative content studios",
+      "Data labeling, analytics, and practical AI application services",
+    ],
+    icon: "Laptop",
+    tagNe: "असीमित बजार",
+    tagEn: "Global Reach",
+  },
+  {
+    id: "cottage-industry",
+    titleNe: "घरेलु, परम्परागत सीप तथा हस्तकला",
+    titleEn: "Cottage Industries, Handicrafts & Local Textiles",
+    sectorNe: "हस्तकला तथा साना उद्योग",
+    sectorEn: "Handicrafts & Heritage Crafts",
+    descriptionNe:
+      "ढाका, अल्लो, पश्मिना, काष्ठकला, हस्तनिर्मित कागज (लोक्ता) जस्ता नेपाली मौलिक उत्पादनहरूको विश्व बजारमा अत्यधिक माग र सम्भावना छ।",
+    descriptionEn:
+      "High global demand for indigenous Nepali treasures including Dhaka weaves, Himalayan Allo fiber, Pashmina, metalcraft, and Lokta handmade paper.",
+    potentialNe: "महिला सशक्तीकरण, परम्परागत सीपको संरक्षण र निर्यात वृद्धि।",
+    potentialEn: "Women economic empowerment, cultural preservation, and export growth.",
+    examplesNe: [
+      "अल्लो तथा ढाकाका आधुनिक फेसन कपडा उत्पादन",
+      "नेपाली हाते कागजका डायरी, कार्ड तथा प्याकेजिङ",
+      "धातु तथा काष्ठकला सामग्रीको अन्तर्राष्ट्रिय बजारीकरण",
+    ],
+    examplesEn: [
+      "Contemporary fashion crafted from wild nettle (Allo) & Dhaka fabrics",
+      "Eco-friendly stationery and premium packaging from Lokta paper",
+      "Fair-trade brassware, wood carvings, and authentic artisan crafts",
+    ],
+    icon: "Sparkles",
+    tagNe: "मौलिक पहिचान",
+    tagEn: "Heritage Identity",
+  },
+  {
+    id: "supply-chain",
+    titleNe: "स्थानीय आपूर्ति शृङ्खला तथा लजिस्टिक्स",
+    titleEn: "Local Supply Chain, Storage & Rural Logistics",
+    sectorNe: "सेवा तथा वितरण",
+    sectorEn: "Logistics & Distribution",
+    descriptionNe:
+      "गाउँको उत्पादन शहरसम्म र शहरको सेवा गाउँसम्म छिटो-छरितो पुर्‍याउन आधुनिक यातायात, भण्डारण र इ-कमर्स लजिस्टिक्सको खाँचो छ।",
+    descriptionEn:
+      "Connecting farm gates with city consumer markets through dependable transport, aggregation centers, cold storage, and last-mile delivery.",
+    potentialNe: "किसानको उचित मूल्य सुनिश्चितता र बिचौलिया न्यूनीकरण।",
+    potentialEn: "Ensuring fair farmer prices and slashing post-harvest distribution waste.",
+    examplesNe: [
+      "ग्रामीण इ-कमर्स र कृषि एग्रिगेसन केन्द्रहरू",
+      "स्थानीय ढुवानी तथा आधुनिक भण्डारण प्रणाली",
+      "फोहोर व्यवस्थापन र पुनर्चक्रण (Recycling) व्यवसाय",
+    ],
+    examplesEn: [
+      "Rural e-commerce pickups and cooperative aggregation nodes",
+      "Refrigerated distribution vans and localized warehousing",
+      "Circular economy, scrap recycling, and compost processing",
+    ],
+    icon: "Truck",
+    tagNe: "बजार संयोजन",
+    tagEn: "Market Linkage",
+  },
+];
+
+export const achievementsData: AchievementItem[] = [
+  {
+    titleNe: "राष्ट्रिय वित्तीय साक्षरता महाअभियान (National Expos)",
+    titleEn: "National Financial Literacy Expos & Conclaves",
+    metric: "५०+ बृहत् मेलाहरू",
+    categoryNe: "सार्वजनिक कार्यक्रम",
+    categoryEn: "Public Events",
+    descriptionNe:
+      "काठमाडौँ लगायत सातै प्रदेशका प्रमुख शहरहरूमा वित्तीय संस्थाहरू, नियामक निकाय र आम नागरिकलाई एकै ठाउँमा ल्याउने गरी सम्पन्न भव्य प्रदर्शनीहरू।",
+    descriptionEn:
+      "Multi-day flagship expos that bridged regulators, commercial banks, insurers, brokers, and citizens across major provincial hubs.",
+    highlightsNe: [
+      "नेपाल राष्ट्र बैंक, धितोपत्र बोर्ड तथा बीमा प्राधिकरणको सक्रिय सहभागिता",
+      "एकै छानामुनि प्रत्यक्ष खाता खोल्ने, डिम्याट बनाउने र कर्जा परामर्श",
+      "विद्यार्थीहरूका लागि विशेष वित्तीय हाजिरीजवाफ तथा क्विज प्रतियोगिताहरू",
+    ],
+    highlightsEn: [
+      "Active institutional participation from NRB, SEBON, and Insurance Authority",
+      "On-spot bank account opening, Demat registration, and loan advisory stalls",
+      "Interactive financial quiz bowls and student case-study competitions",
+    ],
+  },
+  {
+    titleNe: "‘काम गरौँ आफ्नै देशमा’ राष्ट्रिय संवाद शृङ्खला",
+    titleEn: "'Kam Garau Aaphnai Deshma' National Dialogue Series",
+    metric: "१००+ संवाद तथा परामर्श",
+    categoryNe: "उद्यमशीलता अभियान",
+    categoryEn: "Enterprise Movement",
+    descriptionNe:
+      "वैदेशिक रोजगारीको विकल्प खोज्दै स्वदेशमै उद्यम गर्न चाहने हजारौँ युवालाई नीति निर्माता, सफल व्यवसायी र वित्तीय निकायसँग जोड्ने निरन्तर पहल।",
+    descriptionEn:
+      "Continuous empowerment forums uniting thousands of youth and returnee migrants with policy leaders, serial entrepreneurs, and lenders.",
+    highlightsNe: [
+      "सफल नेपाली उद्यमीहरूको संघर्ष र सफलताका कथा प्रस्तुति",
+      "सहुलियतपूर्ण कर्जा र सरकारी अनुदान प्राप्तिका व्यावहारिक परामर्श सत्र",
+      "स्थानीय उत्पादनको बजारीकरणका लागि बि२बि (B2B) नेटवर्किङ",
+    ],
+    highlightsEn: [
+      "Showcasing grassroots stories of perseverance and business breakthrough",
+      "Hands-on clinics on securing subsidized credit and government incentives",
+      "B2B networking sessions bridging rural producers with urban retail buyers",
+    ],
+  },
+  {
+    titleNe: "नियामक निकाय तथा वित्तीय संघ-संस्थाहरूसँगको रणनीतिक सहकार्य",
+    titleEn: "Strategic Alliances with Regulators & BFIs",
+    metric: "७०+ संस्थागत साझेदार",
+    categoryNe: "साझेदारी",
+    categoryEn: "Partnerships",
+    descriptionNe:
+      "नेपालको वित्तीय क्षेत्रलाई सुदृढ बनाउन सरकारी निकायहरू, बैंक तथा वित्तीय संस्थाहरू, बीमा कम्पनीहरू, र स्थानीय पालिकाहरूसँग घनिष्ठ सहकार्य।",
+    descriptionEn:
+      "Close collaborative partnerships with governmental regulators, banking associations, insurance companies, and progressive local municipalities.",
+    highlightsNe: [
+      "नेपाल बैंकर्स संघ तथा विकास बैंक संघसँग संयुक्त चेतनामूलक कार्यक्रम",
+      "स्थानीय सरकारहरूसँगको समन्वयमा गाउँपालिका/नगरपालिका स्तरीय वित्तीय सम्मेलन",
+      "वित्तीय साक्षरता निर्देशिका र सामग्रीहरूको राष्ट्रव्यापी वितरण",
+    ],
+    highlightsEn: [
+      "Joint literacy initiatives with Nepal Bankers' Association and DBAN",
+      "Municipality-level workshops in partnership with local governments",
+      "Mass distribution of tailored financial manuals, guides, and student toolkits",
+    ],
+  },
+];
+
+export const futurePlansData: FuturePlanItem[] = [
+  {
+    id: "skills-incubation",
+    titleNe: "उद्यमशीलता तथा सीप इन्क्युबेशन केन्द्र (Skills Incubation)",
+    titleEn: "Entrepreneurship & Vocational Skills Incubation",
+    timeframeNe: "आगामी ३ वर्ष",
+    timeframeEn: "Next 3 Years",
+    descriptionNe:
+      "प्रत्येक प्रदेशमा स्थानीय आवश्यकता र सम्भावनामा आधारित सीप प्रशिक्षण, व्यवसाय दर्ता सहजीकरण र मेन्टरसिप प्रदान गर्ने इन्क्युबेशन हब स्थापना गर्ने।",
+    descriptionEn:
+      "Establishing regional incubation hubs across all provinces to deliver vocational craft training, business modeling, legal registration, and 1-on-1 mentorship.",
+    objectivesNe: [
+      "कृषि, खाद्य प्रशोधन, पर्यटन र डिजिटल सीपमा ५०,००० युवालाई तालिम",
+      "व्यवसाय योजना (Business Plan) बनाउन निःशुल्क परामर्श डेस्क",
+      "अनुभवी उद्यमीहरूमार्फत निरन्तर मेन्टरिङ व्यवस्था",
+    ],
+    objectivesEn: [
+      "Train 50,000 young citizens in agro-processing, tourism, and digital skills",
+      "Offer free walk-in clinics for commercial business plan drafting",
+      "Connect emerging founders with established industrial mentors",
+    ],
+    icon: "Lightbulb",
+  },
+  {
+    id: "youth-employment",
+    titleNe: "स्वरोजगार तथा सहुलियत कर्जा सहजीकरण (Youth Employment)",
+    titleEn: "Self-Employment & Concessional Finance Linkage",
+    timeframeNe: "निरन्तर कार्यान्वयन",
+    timeframeEn: "Continuous Execution",
+    descriptionNe:
+      "उद्यम गर्न चाहने युवाहरूलाई वित्तीय संस्थाहरूसँग जोडेर सहुलियतपूर्ण कर्जा, सुरक्षण कोष र बीउ पुँजी (Seed Capital) जुटाउन व्यावहारिक सहजीकरण गर्ने।",
+    descriptionEn:
+      "Directly connecting aspiring youth and women entrepreneurs to concessional credit schemes, guarantee funds, and startup seed capital facilities.",
+    objectivesNe: [
+      "बैंक तथा वित्तीय संस्थाहरूसँग समन्वय गरी कर्जा प्रक्रिया सरलीकरण",
+      "महिला उद्यमी र विपन्न वर्गलाई लक्षित गरी विशेष प्याकेज सञ्चालन",
+      "वैदेशिक रोजगारीबाट फर्किएकाहरूको सीप प्रमाणीकरण र लगानी जोड्ने",
+    ],
+    objectivesEn: [
+      "Streamline loan approval workflows with partner financial institutions",
+      "Launch customized entrepreneurship packages for women and marginalized groups",
+      "Certify returnee migrant skills and channel savings into productive ventures",
+    ],
+    icon: "Target",
+  },
+  {
+    id: "remittance-to-production",
+    titleNe: "विप्रेषणलाई उत्पादनशील क्षेत्रमा (Remittance to Productive Capital)",
+    titleEn: "Channeling Remittances into Productive Assets",
+    timeframeNe: "रणनीतिक प्राथमिकता",
+    timeframeEn: "Strategic Priority",
+    descriptionNe:
+      "विदेशमा रहेका नेपालीहरूको रगत–पसिनाबाट भित्रिने रेमिट्यान्सलाई उपभोगमा मात्र सीमित नराखी उद्योग, जलविद्युत र उत्पादनशील सम्पत्तिमा रूपान्तरण गर्ने।",
+    descriptionEn:
+      "Transforming inbound remittances from everyday consumption into equity for local hydropower, agriculture value chains, and national infrastructure funds.",
+    objectivesNe: [
+      "प्रवासी नेपालीहरूका लागि सामूहिक लगानी मोडेल (Collective Investment) निर्माण",
+      "सुरक्षित बण्ड, म्युचुअल फण्ड र उत्पादनशील परियोजनामा लगानी प्रोत्साहन",
+      "नेपाल फर्किएपछि सहजै उद्योग सञ्चालन गर्न सकिने पूर्वाधार सहकार्य",
+    ],
+    objectivesEn: [
+      "Structure trusted collective investment funds for non-resident Nepalis",
+      "Promote transparent bonds, municipal green debt, and productive infrastructure",
+      "Create smooth reintegration pathways for enterprise ownership upon return",
+    ],
+    icon: "ArrowUpRight",
+  },
+  {
+    id: "digital-ai-finance",
+    titleNe: "एआई तथा डिजिटल वित्तीय साक्षरता (AI & Digital Finance)",
+    titleEn: "Next-Gen Fintech & AI-Driven Financial Literacy",
+    timeframeNe: "२०२५ - २०३०",
+    timeframeEn: "2025 - 2030",
+    descriptionNe:
+      "आर्टिफिसियल इन्टेलिजेन्स (AI), फिनटेक र अटोमेसनको युगमा साना व्यवसायी र सर्वसाधारणलाई डिजिटल उपकरण प्रयोग गर्न सक्षम बनाउने।",
+    descriptionEn:
+      "Equipping grassroots MSMEs and citizens to leverage AI tools, digital bookkeeping, automated invoicing, and airtight cyber defenses.",
+    objectivesNe: [
+      "स्थानीय भाषामा एआईमा आधारित वित्तीय परामर्श च्याटबट र अडियो गाइड",
+      "साना पसल तथा किसानहरूका लागि डिजिटल लेखाजोखा (Digital Accounting) एप तालिम",
+      "साइबर सुरक्षा, डिजिटल पहिचान र व्यक्तिगत गोपनीयता जागरण",
+    ],
+    objectivesEn: [
+      "Develop conversational Nepali AI financial guidance and voice toolkits",
+      "Train merchants and smallholders on digital bookkeeping and mobile POS tools",
+      "Promote cyber hygiene, digital identity protection, and fraud defense",
+    ],
+    icon: "Cpu",
+  },
+];
+
+export const faqsData: FaqItem[] = [
+  {
+    qNe: "मिडिया इन्टरनेशनलको मुख्य उद्देश्य के हो?",
+    qEn: "What is the primary mission of Media International?",
+    aNe: "मिडिया इन्टरनेशनलको मुख्य उद्देश्य नेपालमा वित्तीय साक्षरता, बैंकिङ पहुँच, बीमा सचेतना, पुँजी बजारको ज्ञान र उद्यमशीलता प्रवर्द्धन गरी आम नागरिकको आर्थिक जीवनस्तर उकास्नु र मुलुकलाई समृद्ध बनाउनु हो।",
+    aEn: "Our mission is to foster nationwide financial literacy, banking access, insurance awareness, capital market comprehension, and entrepreneurship to elevate the living standards of citizens and cultivate a prosperous, self-reliant Nepal.",
+  },
+  {
+    qNe: "‘काम गरौँ आफ्नै देशमा’ अभियान कसरी सञ्चालन भइरहेको छ?",
+    qEn: "How does the 'Kam Garau Aaphnai Deshma' campaign operate?",
+    aNe: "यो अभियान अन्तर्गत हामी सातै प्रदेशमा अन्तर्क्रिया, उद्यमशीलता कार्यशाला, सफल उद्यमीहरूको अनुभव साटासाट, सहुलियत कर्जा परामर्श र स्थानीय सरकारसँगको समन्वयमा युवाहरूलाई स्वदेशमै व्यवसाय सुरु गर्न मार्गदर्शन प्रदान गर्दछौँ।",
+    aEn: "Through this campaign, we organize regional conclaves, enterprise bootcamps, mentor clinics, concessional loan guidance, and municipal partnerships across all 7 provinces to help youth establish sustainable ventures in Nepal.",
+  },
+  {
+    qNe: "हाम्रो विद्यालय, कलेज वा संस्थाले वित्तीय साक्षरता कार्यक्रम आयोजना गर्न सक्छ?",
+    qEn: "Can our school, college, or organization host a financial literacy event?",
+    aNe: "अवश्य! हामी विद्यालय, विश्वविद्यालय, सहकारी, उद्योग वाणिज्य संघ तथा स्थानीय पालिकाहरूसँग मिलेर संयुक्त रूपमा निःशुल्क तथा सहकार्यमा कार्यक्रमहरू आयोजना गर्दै आएका छौँ। हामीलाई सिधै सम्पर्क गर्न सक्नुहुन्छ।",
+    aEn: "Absolutely! We frequently collaborate with schools, universities, cooperatives, business chambers, and local governments. You can reach out directly via our contact form or official email.",
+  },
+  {
+    qNe: "प्रवासी नेपालीहरूका लागि मिडिया इन्टरनेशनलले के कस्ता पहल गरेको छ?",
+    qEn: "What initiatives does Media International offer for Non-Resident / Migrant Nepalis?",
+    aNe: "हामी वैदेशिक रोजगारीमा रहेका नेपालीहरूका लागि सुरक्षित विप्रेषण, मेरो शेयर/आइपिओ (IPO) मार्फत शेयर बजारमा लगानी, र नेपाल फर्केपछि उत्पादनशील व्यवसाय सुरु गर्ने सम्भाव्यता र लगानी मोडेलबारे निरन्तर सूचना र परामर्श प्रदान गर्दछौँ।",
+    aEn: "We provide dedicated resources on formal remittance channels, primary stock market participation (IPO/MeroShare quotas), and viable investment models for transitioning overseas savings into domestic enterprises upon return.",
+  },
+];
+
+
+export interface GalleryAlbum {
+  id: string;
+  titleNe: string;
+  titleEn: string;
+  descriptionNe: string;
+  descriptionEn: string;
+  coverImage: string;
+  photoCount: number;
+}
+
+export interface GalleryPhoto {
+  id: string;
+  albumId: string;
+  titleNe: string;
+  titleEn: string;
+  descriptionNe: string;
+  descriptionEn: string;
+  locationNe: string;
+  locationEn: string;
+  year: string;
+  imageUrl: string;
+  categoryNe: string;
+  categoryEn: string;
+}
+
+export const galleryAlbumsData: GalleryAlbum[] = [
+  {
+    id: "dialogues",
+    titleNe: "‘काम गरौँ आफ्नै देशमा’ महाअभियान",
+    titleEn: "'Kam Garau Aaphnai Deshma' National Campaign",
+    descriptionNe: "स्वदेशमै उद्यम, रोजगारी सिर्जना, सहुलियतपूर्ण कर्जा र युवा आत्मनिर्भरता प्रवर्द्धन गर्ने मिडिया इन्टरनेशनलको राष्ट्रव्यापी अभियान।",
+    descriptionEn: "Nationwide movement fostering domestic enterprise, concessional capital access, and dignified youth employment in Nepal.",
+    coverImage: "/images/uploads/kam-garau-dignitaries.webp",
+    photoCount: 5,
+  },
+  {
+    id: "sambhawana",
+    titleNe: "‘सम्भावना’ आर्थिक जागरण अभियान",
+    titleEn: "'Sambhawana' Economic Opportunity Campaign",
+    descriptionNe: "नेपालभित्रका अथाह आर्थिक, कृषि, पर्यटन, जलस्रोत र प्राविधिक सम्भावनाहरू उजागर गर्ने विशेष टेलिभिजन तथा मञ्च कार्यक्रम।",
+    descriptionEn: "Unlocking boundless opportunities across agro-processing, ecotourism, clean energy, and youth digital ventures across Nepal.",
+    coverImage: "/images/uploads/sambhawana-launch.webp",
+    photoCount: 2,
+  },
+  {
+    id: "expos",
+    titleNe: "वित्तीय साक्षरता मेला तथा डिजिटल एक्स्पो",
+    titleEn: "Financial Literacy Expos & Digital Banking Drives",
+    descriptionNe: "नेपाल राष्ट्र बैंक, बीमा प्राधिकरण, धितोपत्र बोर्ड तथा बैंकहरूसँगको सहकार्यमा सातै प्रदेश र ग्रामीण तहमा आयोजित मेलाहरू।",
+    descriptionEn: "Flagship provincial expos, digital payments awareness, and grassroots financial clinics in partnership with central regulators and BFIs.",
+    coverImage: "/images/uploads/banking-expo-2079.webp",
+    photoCount: 4,
+  },
+  {
+    id: "partnerships",
+    titleNe: "नियामक निकाय, अवार्ड्स तथा संस्थागत सहकार्य",
+    titleEn: "Regulatory Alliances, Awards & Milestone Honors",
+    descriptionNe: "नेपालका शीर्ष वित्तीय नियामक, बैंकिङ नेतृत्व, राष्ट्रिय सम्मान (National Capital Awards) तथा संस्थागत सहकार्य।",
+    descriptionEn: "National excellence awards, bilateral regulatory summits, and historic milestones honoring 15 years of economic contribution.",
+    coverImage: "/images/uploads/national-capital-awards.webp",
+    photoCount: 3,
+  },
+];
+
+export const galleryPhotosData: GalleryPhoto[] = [
+  // Kam Garau Aaphnai Deshma Album (5 photos)
+  {
+    id: "dialogue-1",
+    albumId: "dialogues",
+    titleNe: "काम गरौँ आफ्नै देशमा: राष्ट्रिय मञ्च तथा प्रमुख अतिथिहरू",
+    titleEn: "Dignitaries & Institutional Partners at 'Kam Garau Aaphnai Deshma'",
+    descriptionNe: "मुक्तिनाथ विकास बैंक, कनेक्टआईपीएस, प्रभु क्यापिटल तथा सानिमा रिलायन्सको सहकार्यमा आयोजित राष्ट्रिय सम्मेलन।",
+    descriptionEn: "Distinguished banking leaders and partners inaugurating the flagship self-reliance movement in Kathmandu.",
+    locationNe: "काठमाडौँ, नेपाल",
+    locationEn: "Kathmandu, Nepal",
+    year: "२०२४",
+    imageUrl: "/images/uploads/kam-garau-dignitaries.webp",
+    categoryNe: "उद्यमशीलता संवाद",
+    categoryEn: "National Campaign",
+  },
+  {
+    id: "dialogue-2",
+    albumId: "dialogues",
+    titleNe: "उद्यमशीलता तथा वित्तीय साक्षरता विशेष सम्बोधन",
+    titleEn: "Keynote Address on Domestic Entrepreneurship & Financial Wisdom",
+    descriptionNe: "स्वदेशमै लगानीका अवसर सिर्जना गर्न र युवा पलायन रोक्न वित्तीय साक्षरताको महत्त्वबारे प्रमुख वक्ताको मन्तव्य।",
+    descriptionEn: "Keynote address delivering actionable insights on retaining youth talent and mobilizing local capital.",
+    locationNe: "होटल यलो प्यागोडा, काठमाडौँ",
+    locationEn: "Hotel Yellow Pagoda, Kathmandu",
+    year: "२०२४",
+    imageUrl: "/images/uploads/kam-garau-speech.webp",
+    categoryNe: "मुख्य मन्तव्य",
+    categoryEn: "Keynote Address",
+  },
+  {
+    id: "dialogue-3",
+    albumId: "dialogues",
+    titleNe: "खोजी आर्थिक सम्भावनाको: नीतिगत मन्थन तथा मार्गदर्शन",
+    titleEn: "High-Level Policy Session on Exploring Economic Potential",
+    descriptionNe: "पूर्व उपप्रधानमन्त्री तथा शीर्ष नेतृत्वद्वारा मिडिया इन्टरनेशनलको अभियानको प्रशंसा र आर्थिक कार्यदिशा प्रस्तुति।",
+    descriptionEn: "National political leadership and economic planners addressing the 'Kam Garau Aaphnai Deshma' conclave.",
+    locationNe: "काठमाडौँ, नेपाल",
+    locationEn: "Kathmandu, Nepal",
+    year: "२०२४",
+    imageUrl: "/images/uploads/kam-garau-keynote.webp",
+    categoryNe: "नीतिगत संवाद",
+    categoryEn: "Policy Summit",
+  },
+  {
+    id: "dialogue-4",
+    albumId: "dialogues",
+    titleNe: "बैंकिङ, पुँजी र उद्यम सहजीकरण प्यानल संवाद",
+    titleEn: "Financial Leaders Panel on Subsidized Credit & Business Scaling",
+    descriptionNe: "बैंक तथा वित्तीय संस्थाका प्रमुख कार्यकारी अधिकृत र उद्यमीहरूबीच सहुलियतपूर्ण कर्जा र व्यवसाय विस्तारबारे अन्तरक्रिया।",
+    descriptionEn: "Executive panel connecting startup founders with commercial bankers to streamline concessional enterprise finance.",
+    locationNe: "काठमाडौँ, नेपाल",
+    locationEn: "Kathmandu, Nepal",
+    year: "२०२४",
+    imageUrl: "/images/uploads/kam-garau-panel.webp",
+    categoryNe: "प्यानल छलफल",
+    categoryEn: "Executive Panel",
+  },
+  {
+    id: "dialogue-5",
+    albumId: "dialogues",
+    titleNe: "टेलिभिजन तथा राष्ट्रव्यापी प्रत्यक्ष प्रसारण स्टुडियो",
+    titleEn: "Live Television Broadcast & National Media Production",
+    descriptionNe: "मिडिया इन्टरनेशनलको वृहत् स्टुडियो र बहु–क्यामेरा सेटअपमार्फत देशव्यापी प्रसारण गरिएको आर्थिक संवाद।",
+    descriptionEn: "Multi-camera broadcast production bringing the economic conclave into millions of households nationwide.",
+    locationNe: "काठमाडौँ, नेपाल",
+    locationEn: "Kathmandu, Nepal",
+    year: "२०२४",
+    imageUrl: "/images/uploads/kam-garau-broadcast.webp",
+    categoryNe: "प्रत्यक्ष प्रसारण",
+    categoryEn: "Live Production",
+  },
+
+  // Sambhawana Album (2 photos)
+  {
+    id: "sambhawana-1",
+    albumId: "sambhawana",
+    titleNe: "‘सम्भावना’ शुभारम्भ समारोह (२०८१ असोज १५ गते)",
+    titleEn: "'Sambhawana' Official Launch Ceremony (October 2024)",
+    descriptionNe: "मिडिया इन्टरनेशनलका अध्यक्ष माधव निरौलाद्वारा ‘सम्भावना’ महाअभियानको औपचारिक विमोचन तथा शुभारम्भ।",
+    descriptionEn: "Official launch of the 'Sambhawana' nationwide campaign led by Chairman Madhav Niraula.",
+    locationNe: "मिडिया इन्टरनेशनल स्टुडियो, काठमाडौँ",
+    locationEn: "Media International Studio, Kathmandu",
+    year: "२०८१",
+    imageUrl: "/images/uploads/sambhawana-launch.webp",
+    categoryNe: "अभियान शुभारम्भ",
+    categoryEn: "Official Launch",
+  },
+  {
+    id: "sambhawana-2",
+    albumId: "sambhawana",
+    titleNe: "‘सम्भावना’ टेलिभिजन स्टुडियो अन्तरक्रिया तथा संवाद",
+    titleEn: "'Sambhawana' Television Studio Dialogue & Policy Interaction",
+    descriptionNe: "अध्यक्ष माधव निरौला तथा विशिष्ट अर्थशास्त्री, नीति निर्माता र उद्यमीहरूसँग नेपालका आर्थिक सम्भावनाबारे विशेष अन्तरक्रिया।",
+    descriptionEn: "In-depth studio discussions uncovering commercial opportunities in agro-business, tourism, and innovation.",
+    locationNe: "काठमाडौँ, नेपाल",
+    locationEn: "Kathmandu, Nepal",
+    year: "२०८१",
+    imageUrl: "/images/uploads/sambhawana-studio.webp",
+    categoryNe: "स्टुडियो संवाद",
+    categoryEn: "Studio Dialogue",
+  },
+
+  // Expos Album (4 photos)
+  {
+    id: "expo-1",
+    albumId: "expos",
+    titleNe: "बैंकिङ तथा वित्तीय डिजिटल एक्स्पो-२०७९ (Banking & Financial Digital Expo)",
+    titleEn: "Banking & Financial Digital Expo 2079 (March 2023)",
+    descriptionNe: "नेपाल राष्ट्र बैंकको प्रवर्द्धन, सेबोन तथा बीमा प्राधिकरणको सहकार्यमा एभरेष्ट बैंकसहित सम्पन्न भव्य डिजिटल एक्स्पो।",
+    descriptionEn: "Apex digital banking exhibition organized with NRB, SEBON, Nepal Insurance Authority, and commercial banks.",
+    locationNe: "काठमाडौँ, नेपाल",
+    locationEn: "Kathmandu, Nepal",
+    year: "२०७९",
+    imageUrl: "/images/uploads/banking-expo-2079.webp",
+    categoryNe: "डिजिटल एक्स्पो",
+    categoryEn: "Digital Expo",
+  },
+  {
+    id: "expo-2",
+    albumId: "expos",
+    titleNe: "वित्तीय जागरण : राष्ट्रिय अभियान (बरियारपट्टी, सिराहा)",
+    titleEn: "Financial Jagaran National Campaign (Bariyarpatti, Siraha)",
+    descriptionNe: "नेपाल राष्ट्र बैंक, प्रभु पे, फोनपे तथा स्थानीय सरकारको सहकार्यमा तराईका दुर्गम गाउँसम्म वित्तीय साक्षरता महाअभियान।",
+    descriptionEn: "Historic rural financial outreach in Siraha with Nepal Rastra Bank, digital wallet partners, and local leaders.",
+    locationNe: "बरियारपट्टी, सिराहा, मधेश प्रदेश",
+    locationEn: "Bariyarpatti, Siraha, Madhesh Province",
+    year: "२०७८",
+    imageUrl: "/images/uploads/financial-jagaran-siraha.webp",
+    categoryNe: "ग्रामीण जागरण",
+    categoryEn: "Grassroots Jagaran",
+  },
+  {
+    id: "expo-3",
+    albumId: "expos",
+    titleNe: "वित्तीय जागरण : राष्ट्रिय अभियान (कर्णाली प्रदेश, सुर्खेत)",
+    titleEn: "Financial Jagaran National Campaign (Karnali Province, Surkhet)",
+    descriptionNe: "कर्णाली प्रदेश स्तरिय वित्तीय सम्मेलन तथा सूचना प्रदर्शनी, वीरेन्द्रनगर सुर्खेतमा सम्पन्न वृहत् कार्यक्रम।",
+    descriptionEn: "Karnali provincial financial literacy convention and banking exhibition in Birendranagar, Surkhet.",
+    locationNe: "वीरेन्द्रनगर, सुर्खेत, कर्णाली प्रदेश",
+    locationEn: "Birendranagar, Surkhet, Karnali Province",
+    year: "२०७८",
+    imageUrl: "/images/uploads/financial-jagaran-karnali.webp",
+    categoryNe: "प्रादेशिक सम्मेलन",
+    categoryEn: "Provincial Conclave",
+  },
+  {
+    id: "expo-4",
+    albumId: "expos",
+    titleNe: "फाइनान्सियल लिटरेसी नेपाल (FLN) शुभारम्भ समारोह",
+    titleEn: "Financial Literacy Nepal (FLN) Inaugural Summit",
+    descriptionNe: "नेपालका अग्रज बैंकर, वित्तीय विश्लेषक तथा मिडिया इन्टरनेशनलको संयुक्त पहलमा फाइनान्सियल लिटरेसी नेपालको घोषणा।",
+    descriptionEn: "Joint inauguration of Financial Literacy Nepal alongside distinguished banking veterans and economists.",
+    locationNe: "काठमाडौँ, नेपाल",
+    locationEn: "Kathmandu, Nepal",
+    year: "२०२३",
+    imageUrl: "/images/uploads/financial-literacy-nepal.webp",
+    categoryNe: "साक्षरता शुभारम्भ",
+    categoryEn: "FLN Inauguration",
+  },
+
+  // Partnerships Album (3 photos)
+  {
+    id: "partner-1",
+    albumId: "partnerships",
+    titleNe: "नेशनल क्यापिटल अवार्ड्स: अध्यक्ष माधव निरौला विशेष सम्मान",
+    titleEn: "National Capital Awards: Felicitation of Chairman Madhav Niraula",
+    descriptionNe: "नेपालको आर्थिक सञ्चार, पुँजी बजार शिक्षा र वित्तीय साक्षरतामा पुर्‍याएको अतुलनीय योगदानको कदरस्वरूप सम्मान पत्र प्रदान।",
+    descriptionEn: "Prestigious National Capital Award honoring Chairman Madhav Niraula for pioneer work in economic media.",
+    locationNe: "काठमाडौँ, नेपाल",
+    locationEn: "Kathmandu, Nepal",
+    year: "२०२१",
+    imageUrl: "/images/uploads/national-capital-awards.webp",
+    categoryNe: "राष्ट्रिय सम्मान",
+    categoryEn: "National Awards",
+  },
+  {
+    id: "partner-2",
+    albumId: "partnerships",
+    titleNe: "बैंकिङ खबर तथा मिडिया इन्टरनेशनल वित्तीय शिखर सम्मेलन",
+    titleEn: "Banking Khabar & Media International Financial Summit",
+    descriptionNe: "बैंकिङ, पुँजी बजार र बीमा क्षेत्रका वरिष्ठ सञ्चारकर्मी तथा विज्ञहरूसँग सम्पन्न उच्चस्तरीय राउन्डटेबल मन्थन।",
+    descriptionEn: "Executive leadership conference convened by Banking Khabar and Media International in Kathmandu.",
+    locationNe: "काठमाडौँ, नेपाल",
+    locationEn: "Kathmandu, Nepal",
+    year: "२०२५",
+    imageUrl: "/images/uploads/banking-khabar-conclave.webp",
+    categoryNe: "संस्थागत सहकार्य",
+    categoryEn: "Executive Summit",
+  },
+  {
+    id: "partner-3",
+    albumId: "partnerships",
+    titleNe: "मिडिया इन्टरनेशनलको ऐतिहासिक स्थापना तथा सञ्चार यात्रा",
+    titleEn: "Historic Foundation & Institutional Milestone of Media International",
+    descriptionNe: "१५ वर्षअघि वित्तीय साक्षरता र आर्थिक पत्रकारिताको जग बसाल्ने बेलाको ऐतिहासिक क्षण तथा सम्मान।",
+    descriptionEn: "Early archival photograph marking the pioneering beginnings of Media International over 15 years ago.",
+    locationNe: "काठमाडौँ, नेपाल",
+    locationEn: "Kathmandu, Nepal",
+    year: "२०१०",
+    imageUrl: "/images/uploads/historical-founding.webp",
+    categoryNe: "ऐतिहासिक अभिलेख",
+    categoryEn: "Historic Archive",
+  },
+];
